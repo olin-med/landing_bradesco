@@ -59,7 +59,6 @@ function App() {
       <PageContainer
         id="home"
         className="
-          bg-[#009fe5]
           py-16 px-4
           flex flex-col lg:flex-row
           justify-center items-center
