@@ -98,7 +98,7 @@ const FormField: React.FC<InputProps> = ({
             py-3
             mt-2
             bg-[#cf1c32]
-            hover:bg-[#cf1c31d1]
+            hover:bg-red-500
             text-white
             font-medium
             rounded-md
