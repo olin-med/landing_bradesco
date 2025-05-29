@@ -55,14 +55,65 @@ function App() {
     <div className="flex flex-col bg-gray-200 min-h-screen">
       <NavBar />
 
-      {/* HOME */}
+      {/* ─── MOBILE: header over background, form below ─── */}
+      <section className="block lg:hidden">
+        <div
+          className="w-full py-16 px-4 flex items-center justify-center"
+          style={{
+            backgroundImage: `url(${familyBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div
+            className="
+              text-[#cf1c32]
+              text-3xl md:text-4xl
+              font-bold
+              text-center
+              leading-tight
+            "
+          >
+            Bradesco, <br />
+            Sempre ao seu lado
+            <p
+              className="
+                mt-4
+                text-base md:text-lg
+                font-normal
+                opacity-80
+                text-white
+              "
+            >
+              Seu caminho para proteção completa
+            </p>
+          </div>
+        </div>
+
+        <div className="px-4 pb-16">
+          <FormField
+            id="name"
+            name="name"
+            value=""
+            className="
+              w-full
+              sm:w-3/4
+              md:w-1/2
+              mx-auto
+            "
+          />
+        </div>
+      </section>
+
+      {/* ─── DESKTOP: one container, background + side-by-side ─── */}
       <PageContainer
         id="home"
         className="
+          hidden lg:flex
           py-16 px-4
-          flex flex-col lg:flex-row
+          flex-row
           justify-center items-center
-          gap-y-8 lg:gap-x-20
+          gap-x-20
         "
         style={{
           backgroundImage: `url(${familyBg})`,
@@ -79,8 +130,7 @@ function App() {
             leading-tight
           "
         >
-          Bradesco, 
-          <br />
+          Bradesco, <br />
           Sempre ao seu lado
           <p
             className="
@@ -108,6 +158,8 @@ function App() {
           value=""
         />
       </PageContainer>
+  
+
 
       {/* BENEFITS */}
       <PageContainer
