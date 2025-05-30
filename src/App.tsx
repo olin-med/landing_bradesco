@@ -9,46 +9,58 @@ import MobileWhatsAppFloating from "./components/MobileWhatsAppFloating"
 import Footer from "./components/Footer"
 import familyBg from "/familia_sofa.avif"
 
+// ─── PRODUTOS (VerticalCard) ───
 const PRODUCT_CARDS = [
   {
-    title: "Linha Pro",
+    title: "Efetivo",
     content: (
       <p className="text-gray-700">
-        A Linha Pro oferece cobertura básica, ideal para quem quer segurança
-        a um preço acessível. Rede credenciada em todo o país com serviços
-        essenciais de ambulatório e internação.
+        Rede regional (SPG 3) com prestadores locais e nacional; melhor custo-benefício.
       </p>
     ),
   },
   {
-    title: "Linha Porto Saúde",
+    title: "Flex",
     content: (
       <p className="text-gray-700">
-        Com a Linha Porto Saúde você tem um plus em atendimento — coberturas
-        ampliadas, exames especiais e reembolso parcial. Rede com hospitais
-        e clínicas premium.
+        Rede nacional flexível (SPG 30) e reembolso específico de consultas e honorários.
       </p>
     ),
   },
   {
-    title: "Linha Tradicional",
+    title: "Ideal",
     content: (
       <p className="text-gray-700">
-        A Linha Tradicional abrange planos com atendimento altamente qualificado,
-        reembolso no Brasil e exterior, e escolhas ilimitadas de prestadores.
+        Abrangência nacional sob medida para RJ, SP e DF; múltiplas opções de prestadores.
       </p>
     ),
   },
   {
-    title: "Linha Porto Bairros",
+    title: "Nacional",
     content: (
       <p className="text-gray-700">
-        A Linha Porto Bairros traz planos com abrangência municipal, preço que
-        cabe no bolso e hospital/laboratório perto de você.
+        Ampla rede referenciada em todo o Brasil (SPG 100); liberdade de escolha.
       </p>
     ),
   },
-]
+  {
+    title: "Nacional Plus",
+    content: (
+      <p className="text-gray-700">
+        Hospitais de excelência + Bradesco Saúde Concierge em SP, RJ, BH e Salvador.
+      </p>
+    ),
+  },
+  {
+    title: "Premium",
+    content: (
+      <p className="text-gray-700">
+        Cobertura completa para empresas a partir de 200 vidas; serviços exclusivos.
+      </p>
+    ),
+  },
+];
+
 
 function App() {
   return (
@@ -181,7 +193,7 @@ function App() {
           id="submit"
           type="submit"
           className="mt-4 lg:mt-0 cursor-pointer bg-gray-200 text-[#cf1c32]"
-          link="https://www.portoseguro.com.br/porto-seguro-saude"
+          link="https://www.bradescoseguros.com.br/clientes"
         >
           Visite a Central de Clientes
         </Button>
@@ -211,45 +223,33 @@ function App() {
       </PageContainer>
       <div className="w-4/5 h-px bg-red-500 mx-auto"/>
 
-      {/* CATEGORIES */}
       <PageContainer
         id="categories"
-        className="
-          bg-gray-200
-          pt-16 pb-28 px-4 sm:px-6 lg:px-8
-          flex flex-col
-          items-center
-        "
+        className="bg-gray-200 pt-16 pb-28 px-4 sm:px-6 lg:px-8 flex flex-col items-center"
       >
-        {/* Section title */}
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">
-          Nossas Categorias de Planos
+          Segmentos de Empresa
         </h2>
-
-        {/* Cards grid */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <CategoryCard id="category1" title="Linha Pro" imageUrl="/familia1.avif">
-            <p>- Empresas de 3 a 499 vidas;</p>
-            <p>- Abrangência regional;</p>
-            <p>- Custo-benefício.</p>
+          <CategoryCard id="spg3" title="SPG 3" imageUrl="/corporate.avif">
+            <p>- Grupos de 3 a 29 pessoas;</p>
+            <p>- Segmento regional (Efetivo);</p>
+            <p>- Melhor custo-benefício.</p>
           </CategoryCard>
-          <CategoryCard id="category2" title="Linha Porto Saúde" imageUrl="/corporate.avif">
-            <p>- Pequenas, médias e grandes empresas;</p>
-            <p>- Abrangência nacional;</p>
-            <p>- Rede otimizada;</p>
-            <p>- Reembolso.</p>
+          <CategoryCard id="spg30" title="SPG 30" imageUrl="/micro_empresa.avif">
+            <p>- Grupos de 30 a 99 pessoas;</p>
+            <p>- Abrangência nacional (Flex);</p>
+            <p>- Reembolso específico.</p>
           </CategoryCard>
-          <CategoryCard id="category3" title="Linha Tradicional" imageUrl="/health1.avif">
-            <p>- Para pequenas e médias empresas;</p>
-            <p>- Abrangência nacional;</p>
-            <p>- Ampla rede referenciada;</p>
-            <p>- Reembolso.</p>
+          <CategoryCard id="spg100" title="SPG 100" imageUrl="/construction.avif">
+            <p>- Grupos de 100 a 199 pessoas;</p>
+            <p>- Rede nacional ampla (Ideal/Nacional);</p>
+            <p>- Reembolso completo.</p>
           </CategoryCard>
-          <CategoryCard id="category4" title="Linha Porto Bairros" imageUrl="/health2.avif">
-            <p>- Empresas de 3 a 99 vidas;</p>
-            <p>- Abrangência municipal;</p>
-            <p>- Hospital e laboratório no seu bairro;</p>
-            <p>- Preço que cabe no bolso.</p>
+          <CategoryCard id="empresarial" title="Empresarial" imageUrl="/big_company.avif">
+            <p>- A partir de 200 pessoas;</p>
+            <p>- Planos Nacional Plus e Premium;</p>
+            <p>- Serviços Concierge e cobertura total.</p>
           </CategoryCard>
         </div>
       </PageContainer>
@@ -298,7 +298,7 @@ function App() {
             {/* inside your existing flex */}
             <div className="w-full lg:w-1/2 h-[350px] flex justify-center">
               <img
-                src="/running.avif"
+                src="/familia3.avif"
                 alt="Detalhes dos produtos"
                 className="h-full w-auto object-cover shadow-lg rounded"
               />

@@ -99,6 +99,8 @@ const FormField: React.FC<InputProps> = ({
             mt-2
             bg-[#cf1c32]
             hover:bg-red-500
+            transition duration-200
+            hover:scale-[1.01]
             text-white
             font-medium
             rounded-md

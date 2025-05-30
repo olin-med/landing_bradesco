@@ -57,8 +57,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
           group flex items-center justify-center
           cursor-pointer w-[90%] mx-auto
           py-3 mt-2 mb-6
+          hover:scale-[1.01] transition duration-300
           bg-[#cf1c32] hover:bg-red-600
-          transition-colors duration-500
           text-white font-medium rounded-md
           focus:outline-none focus:ring-2 focus:ring-blue-500
         "

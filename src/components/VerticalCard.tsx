@@ -10,7 +10,7 @@ const VerticalCard: React.FC<VerticalCardProps> = ({ title, children }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded overflow-hidden shadow-sm">
+    <div className="bg-white rounded hover:scale-[1.01] transition duratrion-100 overflow-hidden shadow-sm">
       {/* Header */}
       <button
         type="button"
