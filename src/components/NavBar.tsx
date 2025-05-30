@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-x-6">
-          <ClientButton link="https://www.portoseguro.com.br/porto-seguro-saude" />
+          <ClientButton link="https://www.bradescoseguros.com.br/clientes" />
           <PhoneButton />
           <WhatsAppButton message="Olá, gostaria de saber mais sobre os planos de saúde da Porto Seguro." />
         </div>
