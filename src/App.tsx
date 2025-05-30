@@ -70,7 +70,7 @@ function App() {
       {/* ─── MOBILE: header over background, form below ─── */}
       <section className="block lg:hidden">
         <div
-          className="w-full py-16 px-4 flex items-center min-h-[600px] relative justify-center"
+          className="w-full py-16 px-4 flex items-center min-h-[450px] relative justify-center"
           style={{
             backgroundImage: `url(${familyBg})`,
             backgroundSize: "cover",
