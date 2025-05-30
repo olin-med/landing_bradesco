@@ -70,7 +70,7 @@ function App() {
       {/* ─── MOBILE: header over background, form below ─── */}
       <section className="block lg:hidden">
         <div
-          className="w-full py-16 px-4 flex items-center justify-center"
+          className="w-full py-16 px-4 flex items-center min-h-[600px] relative justify-center"
           style={{
             backgroundImage: `url(${familyBg})`,
             backgroundSize: "cover",
@@ -102,19 +102,6 @@ function App() {
           </div>
         </div>
 
-        <div className="px-4 pb-16">
-          <FormField
-            id="name"
-            name="name"
-            value=""
-            className="
-              w-full
-              sm:w-3/4
-              md:w-1/2
-              mx-auto
-            "
-          />
-        </div>
       </section>
 
       {/* ─── DESKTOP: one container, background + side-by-side ─── */}
@@ -306,6 +293,25 @@ function App() {
           </div>
         </div>
       </PageContainer>
+      <PageContainer
+        id="home"
+        className="block lg:hidden"
+      >
+        <div className="px-4 pb-16">
+          <FormField
+            id="name"
+            name="name"
+            value=""
+            className="
+              w-full
+              sm:w-3/4
+              md:w-1/2
+              mx-auto
+            "
+          />
+        </div>
+      </PageContainer>
+      
       <div className="flex flex-col">
       {/* only shows on mobile */}
       <MobileWhatsAppFloating />
