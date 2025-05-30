@@ -218,22 +218,26 @@ function App() {
           Segmentos de Empresa
         </h2>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <CategoryCard id="spg3" title="SPG 3" imageUrl="/corporate.avif">
+          <CategoryCard id="spg3" title="SPG 3" imageUrl="/corporate.avif" mobileScrollTargetId="home2"
+  desktopScrollTargetId="home">
             <p>- Grupos de 3 a 29 pessoas;</p>
             <p>- Segmento regional (Efetivo);</p>
             <p>- Melhor custo-benefício.</p>
           </CategoryCard>
-          <CategoryCard id="spg30" title="SPG 30" imageUrl="/micro_empresa.avif">
+          <CategoryCard id="spg30" title="SPG 30" imageUrl="/micro_empresa.avif" mobileScrollTargetId="home2"
+  desktopScrollTargetId="home">
             <p>- Grupos de 30 a 99 pessoas;</p>
             <p>- Abrangência nacional (Flex);</p>
             <p>- Reembolso específico.</p>
           </CategoryCard>
-          <CategoryCard id="spg100" title="SPG 100" imageUrl="/construction.avif">
+          <CategoryCard id="spg100" title="SPG 100" imageUrl="/construction.avif" mobileScrollTargetId="home2"
+  desktopScrollTargetId="home">
             <p>- Grupos de 100 a 199 pessoas;</p>
             <p>- Rede nacional ampla (Ideal/Nacional);</p>
             <p>- Reembolso completo.</p>
           </CategoryCard>
-          <CategoryCard id="empresarial" title="Empresarial" imageUrl="/big_company.avif">
+          <CategoryCard id="empresarial" title="Empresarial" imageUrl="/big_company.avif" mobileScrollTargetId="home2"
+  desktopScrollTargetId="home">
             <p>- A partir de 200 pessoas;</p>
             <p>- Planos Nacional Plus e Premium;</p>
             <p>- Serviços Concierge e cobertura total.</p>
@@ -294,7 +298,7 @@ function App() {
         </div>
       </PageContainer>
       <PageContainer
-        id="home"
+        id="home2"
         className="block lg:hidden"
       >
         <div className="px-4 pb-16">

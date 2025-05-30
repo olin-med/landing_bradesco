@@ -1,4 +1,3 @@
-// src/components/CategoryCard.tsx
 import React from "react";
 
 type CategoryCardProps = {
@@ -7,6 +6,8 @@ type CategoryCardProps = {
   title: string;
   imageUrl: string;
   children?: React.ReactNode;
+  mobileScrollTargetId: string;
+  desktopScrollTargetId: string;
 };
 
 const CategoryCard: React.FC<CategoryCardProps> = ({
@@ -15,11 +16,20 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   title,
   imageUrl,
   children,
+  mobileScrollTargetId,
+  desktopScrollTargetId,
 }) => {
-  const scrollToHome = () => {
-    const el = document.getElementById("home");
+  const scrollToSection = () => {
+    // Tailwind's `lg:` breakpoint is 1024px
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    const targetId = isDesktop
+      ? desktopScrollTargetId
+      : mobileScrollTargetId;
+
+    const el = document.getElementById(targetId);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <div
       id={id}
@@ -32,27 +42,20 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         ${className}
       `}
     >
-      {/* FULL‑WIDTH IMAGE */}
       <img
         src={imageUrl}
         alt={title}
-        className="
-          w-full           /* ← fill the card’s width */
-          h-auto           /* let height scale automatically */
-          object-cover     /* crop if needed to fill container */
-        "
+        className="w-full h-auto object-cover"
       />
 
-      {/* CONTENT AREA */}
       <div className="p-4 flex-1 flex flex-col justify-between">
         <h2 className="text-xl text-[#cc1e24] font-bold mb-2">{title}</h2>
-        <div className="text-gray-700 space-y-1">
-          {children}
-        </div>
+        <div className="text-gray-700 space-y-1">{children}</div>
       </div>
+
       <button
         type="button"
-        onClick={scrollToHome}
+        onClick={scrollToSection}
         className="
           group flex items-center justify-center
           cursor-pointer w-[90%] mx-auto
@@ -63,7 +66,6 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
           focus:outline-none focus:ring-2 focus:ring-blue-500
         "
       >
-        {/* wrap text+arrow so they move together */}
         <span className="flex items-center transition-transform duration-300 group-hover:-translate-x-1">
           <span className="transition-all duration-300">
             SAIBA MAIS
@@ -72,7 +74,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             className="
               ml-2 inline-block
               transform scale-x-0
-              -translate-y-[1px]  
+              -translate-y-[1px]
               group-hover:scale-x-100
               transition-all duration-300
               origin-left
