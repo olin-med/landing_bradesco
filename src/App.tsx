@@ -3,6 +3,7 @@ import PageContainer from "./components/PageContainer"
 import FormField from "./components/FormField"
 import NavBar from "./components/NavBar"
 import Button from "./components/LinkButton"
+import FormButton from "./components/FormButton"
 import CategoryCard from "./components/CategoryCard"
 import VerticalCard from "./components/VerticalCard"
 import MobileWhatsAppFloating from "./components/MobileWhatsAppFloating"
@@ -173,17 +174,18 @@ function App() {
         "
       >
         <div className=" text-white text-base md:text-lg lg:text-xl lg:text-right">
-          Quer Marcar Consultas ou dúvidas sobre seu plano atual? <br className="hidden lg:block" />
-          Já é Cliente?
+          Não é Cliente?<br/>
+          Quer saber mais sobre nossos planos?
         </div>
-        <Button
-          id="submit"
-          type="submit"
-          className="mt-4 lg:mt-0 cursor-pointer bg-gray-200 text-[#cf1c32]"
-          link="https://www.bradescoseguros.com.br/clientes"
-        >
-          Visite a Central de Clientes
-        </Button>
+        <div className=" text-white text-base md:text-lg lg:text-xl lg:text-right">
+          <FormButton 
+              className="mt-4 lg:mt-0 cursor-pointer bg-gray-200 text-[#cf1c32] hover:text-white hover:border-gray-200 hover:bg-[#cf1c32]"
+              mobileScrollTargetId="home2"
+              desktopScrollTargetId="home">
+
+              Receba uma Cotação
+            </FormButton>
+        </div>
       </PageContainer>
 
       {/* ADVERTISING */}
@@ -204,9 +206,19 @@ function App() {
           className="h-56 sm:h-64 lg:h-80 mx-auto lg:mx-0 rounded"
         />
         <div className="text-black space-y-2 text-base md:text-lg lg:text-xl">
-          <div>Não é Cliente?</div>
-          <div>Quer saber mais sobre nossos planos?</div>
+          <div>Quer marcar consultas ou tirar dúvidas sobre seu plano atual? </div>
+          <div>Já é Cliente?</div>
+          <Button
+            id="submit"
+            type="submit"
+            className="mt-4 lg:mt-0 cursor-pointer bg-[#cf1c32] text-white hover:text-[#cf1c32] hover:border-[#cf1c32] hover:bg-gray-200"
+            link="https://www.bradescoseguros.com.br/clientes"
+          >
+            Visite a Central de Clientes
+        </Button>
         </div>
+        
+
       </PageContainer>
       <div className="w-4/5 h-px bg-red-500 mx-auto"/>
 

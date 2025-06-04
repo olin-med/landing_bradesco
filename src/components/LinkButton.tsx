@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
         <button
             id={id}
             type={type}
-            className={`cursor-pointer font-bold border transition duration-300 hover:scale-[1.01] hover:text-white hover:border-white hover:bg-[#cf1c32] py-4 px-6 rounded ${className}`}
+            className={`cursor-pointer font-bold border transition duration-300 hover:scale-[1.01] py-4 px-6 rounded ${className}`}
             onClick={handleClick}
         >
             {children}
