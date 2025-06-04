@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
       {menuOpen && (
         <div className="md:hidden bg-gray-200 border-t border-gray-300">
           <div className="flex flex-col items-center py-4 space-y-4">
-            <ClientButton link="https://www.portoseguro.com.br/porto-seguro-saude" />
+            <ClientButton link="https://www.bradescoseguros.com.br/clientes" />
             <PhoneButton />
             <WhatsAppButton message="Olá, gostaria de saber mais sobre os planos de saúde da Porto Seguro." />
           </div>
