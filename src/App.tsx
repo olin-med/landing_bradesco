@@ -14,41 +14,71 @@
   {
     title: "Efetivo",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Abrangência nacional com prestadores locais e nacionais. A partir de 3 vidas. Melhor custo-benefício.
-      </p>
+        <ul>
+          Cobertura:
+          <li>- Hospital Leforte</li>
+          <li>- Hospital AC Camargo</li>
+          <li>- Hospital São Camilo</li>
+          <li>- Hospital Vitória</li>
+        </ul>
+      </span>
+
     ),
   },
   {
     title: "Flex",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Abrangência nacional e reembolso específico para consultas e honorários. A partir de 3 vidas.
-      </p>
+        
+      </span>
     ),
   },
   {
     title: "Ideal",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Abrangência nacional com foco em RJ, SP e DF. Diversas opções de prestadores. A partir de 3 vidas.
-      </p>
+        <ul>
+          Cobertura:
+          <li>- Hospital Santa Catarina</li>
+          <li>- Hospital Samaritano</li>
+          <li>- HCor </li>
+          <li>- Hospital Edmundo Vasconcélos</li>
+        </ul>
+      </span>
     ),
   },
   {
     title: "Nacional",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Rede ampla em todo o Brasil. Liberdade de escolha com cobertura nacional. A partir de 3 vidas.
-      </p>
+        <ul>
+          Cobertura:
+          <li>- Hospital Pro Matre</li>
+          <li>- Hospital Santa Joana</li>
+          <li>- Rede Dor </li>
+          <li>- Hospital Nove de julho</li>
+          <li>- Hospital Infantil Sabará</li>
+        </ul>
+      </span>
     ),
   },
   {
     title: "Nacional Plus",
     content: (
-      <p className="text-gray-700">
+      <span className="text-gray-700">
         Hospitais de excelência e Bradesco Saúde Concierge em SP, RJ, BH e Salvador. Reembolso elevado. A partir de 3 vidas.
-      </p>
+        <ul>
+          Cobertura:
+          <li>- Hospital Sírio Libanês</li>
+          <li>- Hospital Albert Einstein</li>
+          <li>- Laboratórios Alta e Fleury</li>
+        </ul>
+      </span>
     ),
   },
   {
