@@ -263,7 +263,7 @@
             <CategoryCard id="spg3" title="SPG 3" imageUrl="/corporate.avif" mobileScrollTargetId="home2"
     desktopScrollTargetId="home">
               <p>- Grupos de 3 a 29 pessoas;</p>
-              <p>- Segmento regional (Efetivo);</p>
+              <p>- Abrangência nacional;</p>
               <p>- Melhor custo-benefício.</p>
             </CategoryCard>
             <CategoryCard id="spg30" title="SPG 30" imageUrl="/micro_empresa.avif" mobileScrollTargetId="home2"
@@ -281,7 +281,6 @@
             <CategoryCard id="empresarial" title="Empresarial" imageUrl="/big_company.avif" mobileScrollTargetId="home2"
     desktopScrollTargetId="home">
               <p>- A partir de 200 pessoas;</p>
-              <p>- Planos Nacional Plus e Premium;</p>
               <p>- Serviços Concierge e cobertura total.</p>
             </CategoryCard>
           </div>
